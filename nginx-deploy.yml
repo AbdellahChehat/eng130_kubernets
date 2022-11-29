@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment 
+
+
+metadata:
+  name: nginx-deployment
+
+spec:
+  selector:
+    matchLabels:
+      app: nginx # look for this label to match with k8 service
+  
+  # Let's create 3 replica sets of this instances/pods
+  replicas: 3 
+  
+  # template to use it's label for K8 service to launch in the browser
+  template:
+    metadata:
+      labels:
+        app: nginx
+   
+    # Let's define the container spec
+    spec:
+      containers:
+      - name: nginx 
+        image: abishek726/aneese-docker-app:latest
+        ports:
+        - containerPort: 80
