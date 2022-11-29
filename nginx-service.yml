@@ -1,0 +1,17 @@
+# Select the type of API version and type of service/object
+apiVersion: v1
+kind: Service
+metadata:
+  
+  name: nginx-svc
+  namespace: default
+  
+spec:
+  ports:
+  - nodePort: 30001
+    port: 80 
+    targetPort: 80
+
+  selector:
+    app: nginx
+  type: NodePort
