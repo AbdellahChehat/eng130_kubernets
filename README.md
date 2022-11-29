@@ -18,4 +18,9 @@ Kubernetes automates operational tasks of container management and includes buil
 
 ### K8s Deployment Replicas = 3 
 
+<img width="433" alt="Screenshot 2022-11-29 at 13 37 33" src="https://user-images.githubusercontent.com/115224560/204550426-47d4bd5b-8c70-4992-b948-cfbac086f7a2.png">
+
 - Create nginx-deploy.yaml file and a 
+
+
+<img width="677" alt="Screenshot 2022-11-29 at 14 05 55" src="https://user-images.githubusercontent.com/115224560/204550480-818ca9ed-2d62-4bf7-adb3-c133d55021ec.png">
