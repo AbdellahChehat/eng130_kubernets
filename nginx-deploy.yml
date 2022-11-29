@@ -25,4 +25,4 @@ spec:
       - name: nginx 
         image: agelemerov/eng130-angel-docker:latest
         ports:
-        - containerPort: 3000
+        - containerPort: 80
