@@ -1,0 +1,28 @@
+piVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+  name: node-app-deploy
+
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: node-app
+
+  template:
+    metadata:
+      labels:
+        app: node-app
+
+    spec:
+      containers:
+      - image: ahskhan/eng89_node_prod
+        imagePullPolicy: Always
+        name: eng89-node-prod
+        ports:
+        - containerPort: 3000
+        env:
+            - name: DB_HOST
+              value: mongodb://mongo:27017/posts  
